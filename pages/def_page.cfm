@@ -1,6 +1,6 @@
-﻿<cfset dsn="w3Partner">
-<cfset dsn1="w3Partner_product">
-<cfset dsn3="w3Partner_1">
+﻿<cfset dsn="#dsn#">
+<cfset dsn1="#dsn#_product">
+<cfset dsn3="#dsn#_1">
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">

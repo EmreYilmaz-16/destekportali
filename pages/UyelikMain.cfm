@@ -73,7 +73,7 @@
             password = cryptedPassword;
         </cfscript> 
         <cfquery name="updatePass" datasource="#dsn#">
-            UPDATE w3Partner.COMPANY_PARTNER SET COMPANY_PARTNER_PASSWORD ='#password#' WHERE PARTNER_ID=#session.pp.userid#
+            UPDATE #dsn#.COMPANY_PARTNER SET COMPANY_PARTNER_PASSWORD ='#password#' WHERE PARTNER_ID=#session.pp.userid#
         </cfquery>
         <cfset attributes.is_passok =1>
     </cfif>        

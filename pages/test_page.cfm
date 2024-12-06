@@ -51,13 +51,13 @@ small{
 select 
 	(
 		SELECT EMPLOYEE_NAME + ' ' + EMPLOYEE_SURNAME + ' $Partner Bilgisayar'
-		FROM w3Partner.EMPLOYEES
+		FROM #dsn#.EMPLOYEES
 		WHERE EMPLOYEE_ID = FR.RECORD_EMP
 		) AS RECEMP
 	,(
 		SELECT COMPANY_PARTNER_NAME + ' ' + COMPANY_PARTNER_SURNAME + ' $' + C.NICKNAME
-		FROM w3Partner.COMPANY_PARTNER AS CP
-			,w3Partner.COMPANY AS C
+		FROM #dsn#.COMPANY_PARTNER AS CP
+			,#dsn#.COMPANY AS C
 		WHERE CP.PARTNER_ID = FR.RECORD_PAR
 			AND C.COMPANY_ID = CP.COMPANY_ID
 		) AS RECEPARR
@@ -94,8 +94,8 @@ where FORUMID=2
 <cfelse>
 <cfquery name="searcTopicin" datasource="#dsn#">
 select FT.TOPIC,FT.FORUMID AS forum,  FR.*
- from w3Partner.FORUM_REPLYS as fr
-,w3Partner.FORUM_TOPIC AS FT	 
+ from #dsn#.FORUM_REPLYS as fr
+,#dsn#.FORUM_TOPIC AS FT	 
 where (fr.REPLY LIKE '%#attributes.SearchForm#%' OR FT.TOPIC LIKE '%#attributes.SearchForm#%')
 AND fr.TOPICID=FT.TOPICID
 </cfquery>

@@ -1,7 +1,7 @@
 ﻿<cfquery name="getLeftContent" datasource="#dsn#">
 SELECT CON.CONT_BODY,EMP.EMPLOYEE_NAME,EMP.EMPLOYEE_SURNAME,CON.RECORD_DATE
-  FROM [w3Partner].[w3Partner].[CONTENT] as CON
-  ,[w3Partner].[w3Partner].[EMPLOYEES] as EMP
+  FROM [#dsn#].[#dsn#].[CONTENT] as CON
+  ,[#dsn#].[#dsn#].[EMPLOYEES] as EMP
   where CON.CONTENT_STATUS=1
   and CON.CHAPTER_ID=2
   and CON.INTERNET_VIEW =1

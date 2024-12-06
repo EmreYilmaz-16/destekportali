@@ -205,17 +205,17 @@ label {
             SELECT CC.*
                 ,(
                     SELECT PHOTO
-                    FROM w3Partner.COMPANY_PARTNER AS CP
+                    FROM #dsn#.COMPANY_PARTNER AS CP
                     WHERE CP.PARTNER_ID = CC.PARTNER_ID
                     ) AS PARTNER_FOTO
                 ,(
                     SELECT PHOTO
-                    FROM w3Partner.EMPLOYEES AS EMP
+                    FROM #dsn#.EMPLOYEES AS EMP
                     
                     WHERE EMP.EMPLOYEE_ID = CC.EMP_ID
                       
                     ) AS EMPLOYEE_PHOTO
-            FROM w3Partner.CONTENT_COMMENT AS CC
+            FROM #dsn#.CONTENT_COMMENT AS CC
                             WHERE
                                 CC.CONTENT_ID = #attributes.CONTENT_ID#
                                 AND CC.STAGE_ID = -2 

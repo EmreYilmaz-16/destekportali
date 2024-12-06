@@ -1,6 +1,6 @@
 ﻿<!--- FBS 20120615 workcube_process ve workcube_process_info tagleri icin olusturulmustur --->
 <cfcomponent>
-	<cfset dsn = "w3Partner">
+	
     <cfset database_type = "MSSQL">
 	<cfif isdefined('onesignal_appID') and len(onesignal_appID)>
 		<cfset onesignal_appID = application.systemParam.systemParam().onesignal_appID>

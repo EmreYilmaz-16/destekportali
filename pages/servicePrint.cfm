@@ -1,14 +1,14 @@
 ﻿<script type="text/javascript" src="js/printThis.js"></script>
 <cfsetting showdebugoutput="no">
 <cfif isdefined('session.pp.our_company_id')>
-    <cfquery name="getSubs" datasource="w3Partner_1"><!--- workcube_worknet_22 --->
+    <cfquery name="getSubs" datasource="#dsn#_1"><!--- workcube_worknet_22 --->
         SELECT SUBSCRIPTION_ID FROM SUBSCRIPTION_CONTRACT WHERE COMPANY_ID = #session.pp.company_id# AND IS_ACTIVE = 1
     </cfquery>
     <cfif getSubs.recordcount>
-    	<cfset dsn3 = 'w3Partner_1'><!--- workcube_worknet_22 --->
+    	<cfset dsn3 = '#dsn#_1'><!--- workcube_worknet_22 --->
 	    <!---<cfset session.pp.our_company_id = 22>--->
 		<cfelse>
-		<cfset dsn3 = 'w3Partner_1'>
+		<cfset dsn3 = '#dsn#_1'>
     </cfif>
 </cfif>
 <cfquery name="OUR_COMPANY" datasource="#DSN#">

@@ -13,7 +13,7 @@
 			str['password'] = cryptedPassword;
         </cfscript>
         <cfquery name="Login" datasource="#dsn#">
-        SELECT EMPLOYEE_ID,EMPLOYEE_NAME,EMPLOYEE_SURNAME,PHOTO,count(*) as HAS FROM w3Partner.EMPLOYEES WHERE EMPLOYEE_USERNAME=<cfqueryparam cfsqltype="cf_sql_varchar" value="#str['username']#">
+        SELECT EMPLOYEE_ID,EMPLOYEE_NAME,EMPLOYEE_SURNAME,PHOTO,count(*) as HAS FROM #dsn#.EMPLOYEES WHERE EMPLOYEE_USERNAME=<cfqueryparam cfsqltype="cf_sql_varchar" value="#str['username']#">
          AND EMPLOYEE_PASSWORD =<cfqueryparam cfsqltype="cf_sql_varchar" value="#str['password']#">
          group by EMPLOYEE_NAME,EMPLOYEE_SURNAME,EMPLOYEE_ID,PHOTO         
         </cfquery>
@@ -42,10 +42,10 @@ INSERT INTO TestTable(Konu,Descriptions) VALUES('#konu#','#desc#')
 <cfargument  name="empid" default="">
 <cfargument  name="ooops" default="">
 <cfquery name="getpcat" datasource="#dsn#">
-SELECT PR.PROCESS_ROW_ID,PR.STAGE FROM w3Partner.PROCESS_TYPE AS PT,w3Partner.PROCESS_TYPE_ROWS AS PR
+SELECT PR.PROCESS_ROW_ID,PR.STAGE FROM #dsn#.PROCESS_TYPE AS PT,#dsn#.PROCESS_TYPE_ROWS AS PR
 WHERE PT.PROCESS_ID =PR.PROCESS_ID AND PT.FACTION LIKE '%#ooops#%'
-AND PR.PROCESS_ROW_ID IN (SELECT PROCESS_ROW_ID FROM w3Partner.PROCESS_TYPE_ROWS_POSID WHERE PRO_POSITION_ID=
-(SELECT POSITION_ID FROM w3Partner.EMPLOYEE_POSITIONS WHERE EMPLOYEE_ID=#empid# ))
+AND PR.PROCESS_ROW_ID IN (SELECT PROCESS_ROW_ID FROM #dsn#.PROCESS_TYPE_ROWS_POSID WHERE PRO_POSITION_ID=
+(SELECT POSITION_ID FROM #dsn#.EMPLOYEE_POSITIONS WHERE EMPLOYEE_ID=#empid# ))
 </cfquery>
 <cfset poslist=structNew()>
 <cfset myarr=arrayNew(1)>

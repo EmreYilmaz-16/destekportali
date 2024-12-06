@@ -7,23 +7,23 @@
 <cfparam  name="attributes.system_paper_no" default="">
 <cfparam  name="attributes.service_detail" default="">
 <cfparam  name="attributes.SERVICE_NO" default="">
-<cfset dsn="w3Partner">
+
 <cfif len(attributes.fuseaction)>
 <cfdump  var="#attributes#">
 <cfquery name="get_mail_list" datasource="#dsn#">
 SELECT DISTINCT (CAU_POSITION_ID)
 	,(
 		SELECT EMPLOYEE_EMAIL
-		FROM w3Partner.EMPLOYEE_POSITIONS
+		FROM #dsn#.EMPLOYEE_POSITIONS
 		WHERE POSITION_ID = CAU_POSITION_ID
 		) AS MAIL
-FROM w3Partner.PROCESS_TYPE_ROWS_CAUID
+FROM #dsn#.PROCESS_TYPE_ROWS_CAUID
 WHERE PROCESS_ROW_ID IN (
 		SELECT PROCESS_ROW_ID
-		FROM w3Partner.PROCESS_TYPE_ROWS
+		FROM #dsn#.PROCESS_TYPE_ROWS
 		WHERE PROCESS_ID IN (
 				SELECT PROCESS_ID
-				FROM w3Partner.PROCESS_TYPE
+				FROM #dsn#.PROCESS_TYPE
 				WHERE FACTION LIKE '%#attributes.fuseaction#%'
 				)
 			AND IS_EMAIL = 1

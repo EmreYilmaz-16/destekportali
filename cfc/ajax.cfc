@@ -332,11 +332,11 @@
         </cfif>
         <cfif arguments.islem eq 2>
             <cfquery name="getMax_id" datasource="#dsn#">
-            select max(DENIED_PAGE_ID) AS MAX_ID  from w3Partner.COMPANY_PARTNER_DENIED
+            select max(DENIED_PAGE_ID) AS MAX_ID  from #dsn#.COMPANY_PARTNER_DENIED
             </cfquery>
             <cfset maxid=getMax_id.MAX_ID+1>
                 <cfquery name="upddenied" datasource="#dsn#">
-                   INSERT INTO w3Partner.COMPANY_PARTNER_DENIED (IS_VIEW,PARTNER_ID,DENIED_PAGE,DENIED_PAGE_ID) VALUES (1,#arguments.PARTNER_ID#,'#arguments.pageinfo#',#maxid#)                
+                   INSERT INTO #dsn#.COMPANY_PARTNER_DENIED (IS_VIEW,PARTNER_ID,DENIED_PAGE,DENIED_PAGE_ID) VALUES (1,#arguments.PARTNER_ID#,'#arguments.pageinfo#',#maxid#)                
             </cfquery>
        <cfset durum=2>
         </cfif>

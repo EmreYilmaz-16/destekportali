@@ -563,7 +563,7 @@
     </cffunction>
     <cffunction name="UpdCallStatus" access="remote" returntype="any">
 		<cfquery name="GET_ASSET" datasource="#DSN#">
-           update w3Partner.G_SERVICE set SERVICE_STATUS_ID=10 ,UPDATE_MEMBER=1 where SERVICE_ID=  <cfqueryparam cfsqltype="cf_sql_integer" value="#arguments.service_id#">
+           update #dsn#.G_SERVICE set SERVICE_STATUS_ID=10 ,UPDATE_MEMBER=1 where SERVICE_ID=  <cfqueryparam cfsqltype="cf_sql_integer" value="#arguments.service_id#">
         </cfquery>
         <cfreturn "A">
     </cffunction>
@@ -624,7 +624,7 @@
     </cffunction>
 	<cffunction name="GET_PRO_WORK" access="remote" returntype="query">
         <cfquery name="getProj" datasource="#dsn#">
-    SELECT * FROM w3Partner.WORK_GROUP WHERE WORKGROUP_ID IN (SELECT WORKGROUP_ID FROM w3Partner.WORKGROUP_EMP_PAR WHERE PARTNER_ID=#session.pp.userid#)
+    SELECT * FROM #dsn#.WORK_GROUP WHERE WORKGROUP_ID IN (SELECT WORKGROUP_ID FROM #dsn#.WORKGROUP_EMP_PAR WHERE PARTNER_ID=#session.pp.userid#)
     </cfquery>
     <cfset projlist=0>
     <cfif getProj.recordcount>
@@ -771,7 +771,7 @@
     <cffunction name="GET_SERVICE" access="remote" returntype="query">
 
     <cfquery name="getProj" datasource="#dsn#">
-    SELECT * FROM w3Partner.WORK_GROUP WHERE WORKGROUP_ID IN (SELECT WORKGROUP_ID FROM w3Partner.WORKGROUP_EMP_PAR WHERE PARTNER_ID=#session.pp.userid#)
+    SELECT * FROM #dsn#.WORK_GROUP WHERE WORKGROUP_ID IN (SELECT WORKGROUP_ID FROM #dsn#.WORKGROUP_EMP_PAR WHERE PARTNER_ID=#session.pp.userid#)
     </cfquery>
     <cfset projlist=0>
     <cfif getProj.recordcount>

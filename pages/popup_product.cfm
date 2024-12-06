@@ -22,8 +22,8 @@
 <cfif attributes.is_submit eq 1>
 <cfquery name="fiyatdahilmi" datasource="#dsn#_1">
 SELECT DISTINCT *
-FROM w3Partner_1.PRICE_CAT_EXCEPTIONS AS PCE
-	,w3Partner_1.PRICE_CAT AS PIR
+FROM #dsn#_1.PRICE_CAT_EXCEPTIONS AS PCE
+	,#dsn#_1.PRICE_CAT AS PIR
 WHERE PIR.PRICE_CATID = PCE.PRICE_CATID
 	AND PIR.STARTDATE < GETDATE()
 	AND (
@@ -41,9 +41,9 @@ SELECT P.PRODUCT_ID
 	,PIR.PRICE
 	,P.MANUFACT_CODE
     ,PIR.MONEY AS MONEY_
-FROM w3Partner_product.PRODUCT AS P
-	,w3Partner_1.PRICE_CAT_EXCEPTIONS AS PCE
-	,w3Partner_1.PRICE AS PIR
+FROM #dsn#_product.PRODUCT AS P
+	,#dsn#_1.PRICE_CAT_EXCEPTIONS AS PCE
+	,#dsn#_1.PRICE AS PIR
 WHERE P.PRODUCT_ID = PIR.PRODUCT_ID
 	AND PCE.PRICE_CATID = PIR.PRICE_CATID
     <cfif isDefined("attributes.keyword") and len(attributes.keyword)>  AND PRODUCT_NAME LIKE '%#attributes.keyword#%'</cfif>

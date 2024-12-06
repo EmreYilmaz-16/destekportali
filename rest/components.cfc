@@ -274,7 +274,7 @@
     <cffunction name="getCallCenterDashboard" access="remote" returntype="struct">
 	
         <cfquery name="GetProjects" datasource="#dsn#">
-          select  * from w3Partner.PRO_PROJECTS where PROJECT_STATUS=1 and COMPANY_ID =#session.pp.company_id#
+          select  * from #dsn#.PRO_PROJECTS where PROJECT_STATUS=1 and COMPANY_ID =#session.pp.company_id#
           
         </cfquery>
         <cfset arguments.project_id = valuelist(GetProjects.project_id)>
@@ -563,7 +563,7 @@
     </cffunction>
     <cffunction name="UpdCallStatus" access="remote" returntype="any">
 		<cfquery name="GET_ASSET" datasource="#DSN#">
-           update w3Partner.G_SERVICE set SERVICE_STATUS_ID=10 ,UPDATE_MEMBER=1 where SERVICE_ID=  <cfqueryparam cfsqltype="cf_sql_integer" value="#arguments.service_id#">
+           update #dsn#.G_SERVICE set SERVICE_STATUS_ID=10 ,UPDATE_MEMBER=1 where SERVICE_ID=  <cfqueryparam cfsqltype="cf_sql_integer" value="#arguments.service_id#">
         </cfquery>
         <cfreturn "A">
     </cffunction>

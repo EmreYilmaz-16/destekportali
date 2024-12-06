@@ -14,7 +14,7 @@
 <cfelse>
 	<cfset attributes.finish_date = "">
 </cfif>
-<cfset DSN="w3partner">
+<cfset DSN="#dsn#">
 <cfparam name="attributes.category" default="">
 <cfparam name="attributes.keyword" default="">
 <cfparam name="attributes.page" default=1>

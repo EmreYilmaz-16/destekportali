@@ -1,10 +1,10 @@
 ﻿<!-------<script src="//cdn.ckeditor.com/4.20.0/full/ckeditor.js"></script>------->
 <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 <!----<script src="//cdn.ckeditor.com/4.20.0/basic/ckeditor.js"></script>---->
-<cfset DSN="w3Partner">
-<cfset DSN1="w3Partner_product">
-<cfset DSN3="w3Partner_1">
-<cfset DSN2="w3Partner_#session.pp.PERIOD_YEAR#_1">
+<cfset DSN="#dsn#">
+<cfset DSN1="#dsn#_product">
+<cfset DSN3="#dsn#_1">
+<cfset DSN2="#dsn#_#session.pp.PERIOD_YEAR#_1">
 <style>
 .rw1{
 	display:none;
@@ -14,7 +14,7 @@
 select SERVICECAT,SERVICECAT_ID from G_SERVICE_APPCAT WHERE IS_INTERNET=1
 </cfquery>
     <cfquery name="getProj" datasource="#dsn#">
-    SELECT * FROM w3Partner.WORK_GROUP WHERE WORKGROUP_ID IN (SELECT WORKGROUP_ID FROM w3Partner.WORKGROUP_EMP_PAR WHERE PARTNER_ID=#session.pp.userid#)
+    SELECT * FROM #dsn#.WORK_GROUP WHERE WORKGROUP_ID IN (SELECT WORKGROUP_ID FROM #dsn#.WORKGROUP_EMP_PAR WHERE PARTNER_ID=#session.pp.userid#)
     </cfquery>
 <div class="pageContent">
     <div class="portlet">
@@ -237,10 +237,10 @@ console.log(vala)
 SELECT DISTINCT (CAU_POSITION_ID),PROCESS_ROW_ID
 	,(
 		SELECT EMPLOYEE_EMAIL
-		FROM w3Partner.EMPLOYEE_POSITIONS
+		FROM #dsn#.EMPLOYEE_POSITIONS
 		WHERE POSITION_ID = CAU_POSITION_ID
 		) AS MAIL
-FROM w3Partner.PROCESS_TYPE_ROWS_CAUID
+FROM #dsn#.PROCESS_TYPE_ROWS_CAUID
 WHERE PROCESS_ROW_ID =#attributes.process_stage#
 </cfquery>
 

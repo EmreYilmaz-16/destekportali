@@ -124,9 +124,9 @@
 		</div>
 	</div>
 </div>
-<cfset DSN3="w3Partner_1">
-<!---<cfset DSN2="w3Partner_#year(now())#_1">--->
-<cfset DSN2="w3Partner_#session.pp.PERIOD_YEAR#_#attributes.sirket#">
+<cfset DSN3="#dsn#_1">
+<!---<cfset DSN2="#dsn#_#year(now())#_1">--->
+<cfset DSN2="#dsn#_#session.pp.PERIOD_YEAR#_#attributes.sirket#">
 
 <cfset DEVBakiye=0>
 <cfset DEVDBakiye=0>

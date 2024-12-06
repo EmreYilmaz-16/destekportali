@@ -10,7 +10,7 @@
         }
     </style>
     <cfquery name="getProj" datasource="#dsn#">
-    SELECT * FROM w3Partner.WORK_GROUP WHERE WORKGROUP_ID IN (SELECT WORKGROUP_ID FROM w3Partner.WORKGROUP_EMP_PAR WHERE PARTNER_ID=#session.pp.userid#)
+    SELECT * FROM #dsn#.WORK_GROUP WHERE WORKGROUP_ID IN (SELECT WORKGROUP_ID FROM #dsn#.WORKGROUP_EMP_PAR WHERE PARTNER_ID=#session.pp.userid#)
     </cfquery>
 <div class="pageContent">
     <div class="row">
