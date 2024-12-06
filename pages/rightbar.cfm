@@ -1,0 +1,1 @@
+﻿<script type="text/javascript"> var ebWidth = 301; var ebHeight = 370; </script> <script type="text/javascript" charset="iso-8859-9" src="https://anlikdoviz.co/assets/js/currency-box.js"></script>

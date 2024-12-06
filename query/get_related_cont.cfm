@@ -1,0 +1,10 @@
+﻿<cfquery name="GET_RELATED_CONT" datasource="#DSN#">
+SELECT 		C.CONT_HEAD,
+		C.CONT_SUMMARY ,
+		C.CONTENT_ID FROM w3Partner.CONTENT as C,w3Partner.CONTENT_RELATION AS CR
+WHERE C.CONTENT_ID=CR.CONTENT_ID
+AND CR.ACTION_TYPE_ID=#attributes.cntid# AND
+		C.STAGE_ID = -2 AND
+		C.EMPLOYEE_VIEW = 1	
+		
+		</cfquery>

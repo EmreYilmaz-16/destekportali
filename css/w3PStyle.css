@@ -1,0 +1,344 @@
+﻿
+a.navbar-brand img {
+	width: 33px;
+	margin: 0;
+	padding: 0;
+}
+
+a.navbar-brand {
+	height: 51px;
+	width: 50px;
+	display: block;
+	background: #e43a45;
+	padding: 11px;
+	margin-bottom: -1px;
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+	color: #fff;
+	background-color: #c53942;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+	color: #5e5e5e;
+	background-color: #d2434c !important;
+}
+
+.pageContent {
+	max-width: 100%;
+	max-height: 100%;
+	min-height: 0px;
+	margin: 70px 30px 80px 80px;
+}
+
+.menuContent {
+	float: left;
+	height: 100%;
+	background: #525252;
+	width: 50px;
+	margin-left: 0px;
+	display: block;
+	margin-top: 0px;
+	margin-right: 0px;
+	top:10px;
+	position: fixed;
+	z-index:999;
+}
+
+ul.leftMenu {
+	list-style: none;
+	padding: 0px;
+	margin: 50px 0 0 0;
+}
+
+ul.leftMenu  li {
+	list-style: none;
+	height: 35px;
+	font-size: 17px;
+	border-bottom: 1px solid #5f5e5e;
+	color: white;
+	background: #525252;
+	line-height: 32px;
+	padding: 0px 0px 0px 9px;
+}
+
+ul.leftMenu  li:hover {
+	width: 276px !important;
+	position: relative !important;
+	z-index: 10000;
+	display: block !important;
+	background: #424242;
+	cursor: pointer;
+}
+
+ul.leftMenu  li:hover span.title {
+	display: inline !important;
+}
+
+ul.leftMenu  li span.title {
+	display: none;
+	padding-left: 11px;
+	line-height: 35px;
+}
+
+ul.leftMenu  li i {
+	float: left;
+	padding: 2px 10px 0px 6px;
+	font-size: 20px;
+}
+
+ul.leftMenu  li a {
+	color: white;
+	text-transform:none;
+	text-decoration: none;
+}
+
+
+.w3Body.container-fluid {padding: 0 !important;}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 8px 0 8px 0;
+  height: 40px;
+  margin: 0;
+}
+
+.footer p {
+	margin: 5px 15px;
+}
+
+.portletFooter {
+    border-top: 1px solid gainsboro;
+    padding: 19px 10px 10px 10px;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+
+  /* custom */
+  span.widget-thumb-subtitle.smallTitle {
+	text-transform: none;
+	color: black !important;
+}
+
+.searchDetailContent{ 	
+	position: absolute;
+	margin-top: 42px;
+	width:100%;
+	}
+	
+div.message span.body p{margin:0px !important;}
+
+.chats li span.body{font-size:13px !important}
+
+.lgTabNav a { font-size: 15px !important;  font-weight: bold;}
+
+.well-spacial { margin: 0px 0px 35px 0px!important; padding: 20px 10px 10px 10px; }
+.padding-0 { padding: 0 !important;}
+
+.padding-LR-5 { padding: 0px 5px !important;}
+
+.padding-LR-10 { padding: 0px 10px !important;}
+
+.padding-LR-30 { padding: 0px 30px !important;}
+
+.padding-top-0 { padding-top: 0 !important;}
+
+.padding-bottom-0 { padding-bottom: 0 !important;}
+
+.padding-top-5 { padding-top: 5px !important;}
+
+.padding-bottom-5 { padding-bottom: 5px !important;}
+
+.margin-0 { margin: 0 !important;}
+
+.margin-top-0 { margin-top: 0 !important;}
+
+.margin-bottom-0 { margin-bottom: 0 !important;}
+
+.margin-top-5 { margin-top: 5px !important;}
+
+.margin-top-7 { margin-top: 7px !important;}
+
+.margin-left-8 { margin-left: 8px !important;}
+
+.margin-bottom-5 { margin-bottom: 5px !important;}
+
+.tableFooter{padding: 0px 15px; border-top: 1px solid #dddddd;} 
+
+.tableFooterInfo {margin-top: 25px;} 
+
+.font-19 { font-size: 19px !important; }
+
+.font-18 { font-size: 18px !important; }
+
+.font-17 { font-size: 17px !important; }
+
+.seperator { border-bottom: 1px solid gainsboro; padding-bottom: 10px; margin-bottom: 10px; }
+
+.text-left { text-align: left !important; }
+
+.text-right { text-align: right !important; }
+
+.inputGroupSeperator{ border: none; background: none; padding: 0px 5px; }
+
+.btnPointer{cursor:pointer;}
+
+.margin-bottom-15 { margin-bottom: 15px !important;}
+
+.tableFooterInfo { margin: 25px 0; }
+
+.border-bottom{ border-bottom: 1px solid #e8e8e8;  margin-bottom: 10px !important; padding-bottom: 10px; }
+
+.borderLR-grey{ border-left: 1px solid #eee; border-right: 1px solid #eee; }
+
+.borderL-grey{ border-left: 1px solid #eee; }
+
+.no-bg { border: none !important;  background: none !important; }
+
+.borderR-grey{ border-right: 1px solid #eee; }
+
+.portletChatBody { background: #f3f6f9; margin-bottom: 5px;}
+
+.portletChatBody .workButtonGroup { padding: 10px; background: #e9eff3; display: block; margin-top: -6px; margin-bottom: 10px;}
+
+.note.note-info.workDescription p {
+    font-size: 16px;
+}
+
+span.bodyChatButton {
+    display: block;
+    border-top: 1px solid #eae6e6;
+    margin-top: 11px;
+    padding: 4px 0;
+    font-size: 10px;
+}
+
+span.bodyChatButton a {
+    font-size: 15px;
+    color: #3598dc;
+    text-decoration: none;
+}
+.bodyAnswers {
+    padding: 0 5px;
+    margin: -5px -5px -5px -5px;
+}
+
+ul.chatsAnswers{ margin: 0px; padding: 0px; }
+
+.bodyAnswers .chat-form {
+    margin: 0 -5px;}
+
+.workButtonGroup {
+    margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+.workButtonGroup a {
+    margin-right: 5px;
+}
+
+.workButtonGroup i {
+    margin-right: 5px;
+}
+
+span.bodyChatButton a {margin-right:10px}
+
+span.bodyChatButton a i{margin-right:3px}
+
+span.bodyChatButton a span { margin: -3px 2px 0px 3px; }
+
+ul.attacmentList { padding: 0; }
+
+ul.attacmentList li { list-style: none;  padding: 5px 0;  margin: 10px auto;  font-size: 12px; }
+
+ul.attacmentList li:hover { color: #2b7db5; cursor: pointer;}
+
+ul.attacmentList li i { color: #424242 !important; }
+
+ul.attacmentList li i.fa-times:hover { color: #e43a45 !important;}
+
+
+div.attacmentBody { padding: 1px 10px; background-color: #e9eff3; }
+
+.list-group {list-style:none;}
+
+pre.maxHeight{max-height:200px;}
+
+.chat-form {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: stretch;
+}
+
+.chat-form .input-cont {
+    width: calc(100% - 45px);
+	margin: 0 !important;
+}
+
+.chat-form .btn-cont {
+    display: flex;
+    margin: 0 !important;
+}
+
+.chat-form .btn-cont .btn  {
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+}
+
+/*chart.js*/
+ul.legend-list li {
+   	margin: 5px 5px 10px 0px;
+   	font-size: 11px;
+   	text-align: left;
+}
+ul.legend-list li span {
+    float: right;
+    margin: 0px 0px 0px 0px;
+    font-weight: bold;
+}
+ul.legend-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+.m-r-10 {
+    margin-right: 10px;
+}
+.m-t-3{
+    margin-top: 3px;
+}
